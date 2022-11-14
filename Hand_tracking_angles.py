@@ -7,8 +7,9 @@ eTime=0
 mp_drawing = mp.solutions.drawing_utils
 mp_hands = mp.solutions.hands
 mp_hands.HandLandmark.WRIST
-
+#may change the landmark list 
 joint_list = [[8,7,6], [7,6,5], [6,5,0]]
+#function for detecting right and left hand
 def get_label(index, hand, results):
     output = None
     for idx, classification in enumerate(results.multi_handedness):
@@ -26,7 +27,7 @@ def get_label(index, hand, results):
 
     return output
 
-
+#function for calculating angles
 def draw_finger_angles(image, results, joint_list):
     # Loop through hands
     for hand in results.multi_hand_landmarks:
