@@ -38,7 +38,7 @@ with mp_hands.Hands(
                                           mp_drawing.DrawingSpec(color=(121, 22, 76), thickness=2, circle_radius=4),
                                           mp_drawing.DrawingSpec(color=(250, 44, 250), thickness=2, circle_radius=2),
                                           )
-
+        #finding frame extraction rate
         eTime = time.time()
         fps = 1 / (eTime - sTime)
         sTime=eTime
